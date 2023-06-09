@@ -18,6 +18,6 @@ func main() {
 	utils.LoadTemplate()
 	r := router.Generate()
 
-	fmt.Printf("Running webapp on port: %d", config.Port)
+	fmt.Printf("Running webapp on port: %d \n", config.Port)
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", config.Port), r))
 }
