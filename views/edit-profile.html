@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reikianos - Editar Usuário</title>
+  <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+  {{ template "cabecalho" }}
+
+  <div class="container-fluid">
+    <div class="row mt-4">
+      <div class="col-12">
+        <h3>Editar Dados</h3>
+        <form id="editar-profile">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Insira o seu nome"
+              value="{{ .Name }}" required="required">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Insira o seu email"
+              value="{{ .Email }}" required="required">
+          </div>
+          <div class="form-group">
+            <label for="nick">Nick</label>
+            <input type="text" class="form-control" id="nick" name="nick" placeholder="Insira o seu nick"
+              value="{{ .Nick }}" required="required">
+          </div>
+          <div class="form-group">
+            <label for="show-terapeuta">Aparecer na Pagina de Terapeutas?</label>
+            <select class="form-control" id="show-terapeuta" name="show-terapeuta" required="required">
+              <option>Nao</option>
+              <option>Sim</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="facebook">Facebook</label>
+            <input type="text" class="form-control" id="facebook" name="facebook"
+              placeholder="Insira o seu facebook: apenas o nome" value="{{ .Facebook }}">
+          </div>
+          <div class="form-group">
+            <label for="instagram">Instagram</label>
+            <input type="text" class="form-control" id="instagram" name="instagram"
+              placeholder="Insira o seu instagram: apenas o nome" value="{{ .Instagram }}">
+          </div>
+
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="text" class="form-control" id="telefone" name="telefone" required="required"
+              onkeypress="$(this).mask('(00) 00000-0000')" placeholder="Insira o seu telefone: " value="{{ .Telefone }}">
+          </div>
+
+          <button type="submit" class="btn btn-info">Atualizar Dados</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  {{ template "footer" }}
+  {{ template "scripts" }}
+  <script src="/assets/js/users.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+</body>

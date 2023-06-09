@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>consolador pet</title>
+    <link
+      rel="stylesheet"
+      href="/assets/css/bootstrap.css"
+      type="text/css"
+      charset="utf-8"
+    />
+  </head>
+
+  <body>
+    {{ template "menu-admin" }}
+
+    <div class="container-fluid">
+      <div class="row mt-4">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+          <h3>Cadastrar Pet</h3>
+          <fieldset>
+            <form id="novo-pet" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="nome">Nome</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nome"
+                  name="nome"
+                  required="required"
+                  placeholder="Insira o Nome do Animal"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="telefone">Telefone de Contato</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="telefone"
+                  name="telefone"
+                  required="required"
+                  placeholder="Telefone"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="especie">Selecione a Especie</label>
+                <select
+                  class="form-control"
+                  id="especie"
+                  name="especie"
+                  required="required"
+                >
+                  <option>Gato</option>
+                  <option>Cachorro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="genero">Selecione o Genero</label>
+                <select
+                  class="form-control"
+                  id="genero"
+                  name="genero"
+                  required="required"
+                >
+                  <option>Macho</option>
+                  <option>Fêmea</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="porte">Selecione o Porte do Animal</label>
+                <select
+                  class="form-control"
+                  id="porte"
+                  name="porte"
+                  required="required"
+                >
+                  <option>Pequeno</option>
+                  <option>Médio</option>
+                  <option>Grande</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="vacinado">O animal esta Vacinado?</label>
+                <select
+                  class="form-control"
+                  id="vacinado"
+                  name="vacinado"
+                  required="required"
+                >
+                  <option>Estou</option>
+                  <option>Não estou</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="castrado">O animal esta Castrado?</label>
+                <select
+                  class="form-control"
+                  id="castrado"
+                  name="castrado"
+                  required="required"
+                >
+                  <option>Estou</option>
+                  <option>Não estou</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="descricao">Descrição do Animal</label>
+                <textarea class="form-control" id="descricao" name="descricao" required="required" placeholder="Insira a descrição do pet" rows="3"></textarea>
+              </div>
+
+              <div class="form-group" enctype="multipart/form-data">
+                <label for="arquivo">Selecionar foto do Pet: </label>
+                <br />
+                <input type="file" name="arquivo" id="arquivo" />
+
+                <br />
+                <br />
+              </div>
+
+              <div>
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
+              </div>
+            </form>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    {{ template "footer" }}
+    <!--  comment  -->
+    {{ template "scripts" }}
+
+    <script src="/assets/js/pet.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+      $("#telefone").mask("(00) 0000-00009");
+    </script>
+  </body>
+</html>

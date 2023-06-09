@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa do Consolador</title>
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    {{ template "cabecalho" }}
+    <h1>Consolador Pets</h1>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        {{ range . }}
+        <div class="col-sm-6">
+          <div class="card">
+            <a href="/pet/details/{{ .ID }}">
+              <img
+                class="card-img-top img-fluid"
+                src="/{{ .Arquivo }}"
+                alt="Casa do Consolador Foto do Animal"
+              />
+            </a>
+            <div class="card-block">
+              <h5 class="card-title text-center">{{ .Nome }}</h5>
+              <p class="card-text text-center">Minha Especie: {{ .Especie }}</p>
+              <p class="card-text text-center">Eu sou {{ .Genero }}</p>
+              <p class="card-text text-center">Estou em Santo Andre</p>
+              <a href="/pet/details/{{ .ID }}">
+                <button type="button" class="btn btn-primary mx-auto">
+                  Click para mais Informacoes
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    {{ template "footer" }}
+    <!--  comment  -->
+    {{ template "scripts" }}
+    <!-- <script src="/assets/js/publications.js"></script> -->
+  </body>
+</html>

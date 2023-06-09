@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+    <title>Consolador Pet - Login</title>
+  </head>
+
+  <body>
+
+    <section class="vh-100">
+      <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <div class="d-flex justify-content-center pb-5">
+              <img src="/assets/images/logo_consolador_new2020-1.png"
+                class="img-fluid" alt="Cada do consolador Logo">
+            </div>
+            <form id="login">
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="email" class="form-control form-control-lg"
+                  placeholder="Insira seu E-mail" />
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-3">
+                <input type="password" id="senha" class="form-control form-control-lg"
+                  placeholder="Insira seu Senha" />
+              </div>
+
+              <div class="text-center text-lg-start mt-4 pt-2">
+                <button type="submit" class="btn btn-primary btn-lg"
+                  style="padding-left: 2.5rem; padding-right: 2.5rem;">Entrar</button>
+              </div>
+
+              <br/>
+              <br/>
+
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#!" class="text-body">Esqueceu sua Senha?</a>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+    {{ template "scripts" }} {{ template "footer" }}
+    <script src="/assets/js/login.js"></script>
+  </body>
+</html>

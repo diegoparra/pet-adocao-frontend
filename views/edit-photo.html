@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reikianos - Editar Usuário</title>
+  <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+  {{ template "cabecalho" }}
+
+  <div class="container-fluid">
+    <div class="row mt-4">
+      <div class="col-12">
+        <h3>Editar Dados</h3>
+        <form id="editar-foto" enctype="multipart/form-data">
+			 <div class="col-xs-12 col-md-6 offset-md-3">
+				<div class="jumbotron text-center">
+					<h3> Foto Atual </h3>
+					<img src="/{{ .File }}" alt="" style="width: 350px; height: 350px;" class="img-fluid">
+					<!-- <img src="/{{ .File }}" alt="Responsive image" class="img-fluid"> -->
+				</div>
+			</div>
+
+			 <div class="form-group" enctype="multipart/form-data">
+				<label for="file">Trocar Imagem: </label>
+				<input type="file" name="file" id="file">
+			 </div>
+
+          <button type="submit" class="btn btn-info">Atualizar Foto</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  {{ template "footer" }}
+  {{ template "scripts" }}
+  <script src="/assets/js/users.js"></script>
+</body>
