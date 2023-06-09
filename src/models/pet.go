@@ -5,8 +5,9 @@ import (
 	"fmt"
 	"net/http"
 	"time"
-	"webapp/src/config"
-	"webapp/src/requests"
+
+	"github.com/diegoparra/pet-adocao-frontend/src/config"
+	"github.com/diegoparra/pet-adocao-frontend/src/requests"
 )
 
 type Pet struct {

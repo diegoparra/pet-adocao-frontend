@@ -5,10 +5,11 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"webapp/src/config"
-	"webapp/src/cookies"
-	"webapp/src/router"
-	"webapp/src/utils"
+
+	"github.com/diegoparra/pet-adocao-frontend/src/config"
+	"github.com/diegoparra/pet-adocao-frontend/src/cookies"
+	"github.com/diegoparra/pet-adocao-frontend/src/router"
+	"github.com/diegoparra/pet-adocao-frontend/src/utils"
 )
 
 func main() {

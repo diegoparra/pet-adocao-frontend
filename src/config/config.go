@@ -29,13 +29,13 @@ func Load() {
 
 	Port, err = strconv.Atoi(os.Getenv("APP_PORT"))
 	if err != nil {
-		log.fatal(err)
+		log.Fatal(err)
 	}
 
-	apiurl = os.getenv("api_url")
+	APIURL = os.Getenv("API_URL")
 
-	hashkey = []byte(os.getenv("hash_key"))
+	HashKey = []byte(os.Getenv("HASH_KEY"))
 
-	blockkey = []byte(os.getenv("block_key"))
+	BlockKey = []byte(os.Getenv("BLOCK_KEY"))
 
 }

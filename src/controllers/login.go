@@ -5,10 +5,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"webapp/src/answers"
-	"webapp/src/config"
-	"webapp/src/cookies"
-	"webapp/src/models"
+
+	"github.com/diegoparra/pet-adocao-frontend/src/config"
+	"github.com/diegoparra/pet-adocao-frontend/src/cookies"
+	"github.com/diegoparra/pet-adocao-frontend/src/models"
+
+	"github.com/diegoparra/pet-adocao-frontend/src/answers"
 )
 
 // DoLogin use the email and password to authenticate a user into the app

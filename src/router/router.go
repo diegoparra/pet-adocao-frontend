@@ -2,8 +2,7 @@
 package router
 
 import (
-	"webapp/src/router/routes"
-
+	"github.com/diegoparra/pet-adocao-frontend/src/router/routes"
 	"github.com/gorilla/mux"
 )
 

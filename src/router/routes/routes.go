@@ -3,8 +3,8 @@ package routes
 
 import (
 	"net/http"
-	"webapp/src/middlewares"
 
+	"github.com/diegoparra/pet-adocao-frontend/src/middlewares"
 	"github.com/gorilla/mux"
 )
 

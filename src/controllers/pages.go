@@ -6,12 +6,13 @@ import (
 	"fmt"
 	"net/http"
 	"strconv"
-	"webapp/src/answers"
-	"webapp/src/config"
-	"webapp/src/cookies"
-	"webapp/src/models"
-	"webapp/src/requests"
-	"webapp/src/utils"
+
+	"github.com/diegoparra/pet-adocao-frontend/src/answers"
+	"github.com/diegoparra/pet-adocao-frontend/src/config"
+	"github.com/diegoparra/pet-adocao-frontend/src/cookies"
+	"github.com/diegoparra/pet-adocao-frontend/src/models"
+	"github.com/diegoparra/pet-adocao-frontend/src/requests"
+	"github.com/diegoparra/pet-adocao-frontend/src/utils"
 
 	"github.com/gorilla/mux"
 )

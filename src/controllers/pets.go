@@ -7,9 +7,10 @@ import (
 	"io/ioutil"
 	"net/http"
 	"strconv"
-	"webapp/src/answers"
-	"webapp/src/config"
-	"webapp/src/requests"
+
+	"github.com/diegoparra/pet-adocao-frontend/src/answers"
+	"github.com/diegoparra/pet-adocao-frontend/src/config"
+	"github.com/diegoparra/pet-adocao-frontend/src/requests"
 
 	"github.com/gorilla/mux"
 )

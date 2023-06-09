@@ -3,7 +3,8 @@ package routes
 
 import (
 	"net/http"
-	"webapp/src/controllers"
+
+	"github.com/diegoparra/pet-adocao-frontend/src/controllers"
 )
 
 var routesLogin = []Route{

@@ -3,7 +3,8 @@ package cookies
 import (
 	"net/http"
 	"time"
-	"webapp/src/config"
+
+	"github.com/diegoparra/pet-adocao-frontend/src/config"
 
 	"github.com/gorilla/securecookie"
 )

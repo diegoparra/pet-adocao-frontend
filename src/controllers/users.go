@@ -8,10 +8,11 @@ import (
 	"io/ioutil"
 	"net/http"
 	"strconv"
-	"webapp/src/answers"
-	"webapp/src/config"
-	"webapp/src/cookies"
-	"webapp/src/requests"
+
+	"github.com/diegoparra/pet-adocao-frontend/src/answers"
+	"github.com/diegoparra/pet-adocao-frontend/src/config"
+	"github.com/diegoparra/pet-adocao-frontend/src/cookies"
+	"github.com/diegoparra/pet-adocao-frontend/src/requests"
 )
 
 func CreateUser(w http.ResponseWriter, r *http.Request) {

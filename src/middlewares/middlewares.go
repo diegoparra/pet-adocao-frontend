@@ -3,7 +3,8 @@ package middlewares
 import (
 	"log"
 	"net/http"
-	"webapp/src/cookies"
+
+	"github.com/diegoparra/pet-adocao-frontend/src/cookies"
 )
 
 func Logger(next http.HandlerFunc) http.HandlerFunc {
