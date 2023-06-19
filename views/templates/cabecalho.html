@@ -1,7 +1,15 @@
 {{ define "cabecalho" }}
 <nav
-  class="navbar navbar-expand-lg navbar-expand-sm navbar-expand-md navbar-light" style="background-color: #e3f2fd;">
-  <a class="navbar-brand" href="/">Consolador Pets</a>
+  class="navbar navbar-expand-lg navbar-expand-sm navbar-expand-md navbar-light"
+  style="background-color: #e3f2fd"
+>
+  <a class="navbar-brand" href="https://casadoconsolador.com.br"
+    ><img
+      class="img-fluid"
+      src="/assets/img/cropped-Casa-logo.png"
+      alt="Logo Casa do Consolador"
+      style="height: 77px"
+  /></a>
   <button
     class="navbar-toggler"
     type="button"
@@ -18,30 +26,18 @@
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
         <a class="nav-link" href="/"
-          >Página Principal <span class="sr-only">(current)</span></a
+          >Início<span class="sr-only">(current)</span></a
         >
       </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Buscar Animal
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/">Todos os Pets</a>
-          <a class="dropdown-item" href="/gato">Gato</a>
-          <a class="dropdown-item" href="/cachorro">Cachorro</a>
-        </div>
+      <li class="nav-item">
+        <a class="nav-link" href="/cachorro">Cachorro</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/gato">Gato</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="https://casadoconsolador.com.br"
-          >Voltar ao site Principal <span class="sr-only">(current)</span></a
+          >Voltar ao site da Casa <span class="sr-only">(current)</span></a
         >
       </li>
     </ul>
