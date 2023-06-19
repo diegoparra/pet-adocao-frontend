@@ -13,4 +13,10 @@ var routePages = []Route{
 		Func:         controllers.LoadLoginPage,
 		AuthRequired: false,
 	},
+	{
+		URI:          "/page/cadastrar-usuario",
+		Method:       http.MethodGet,
+		Func:         controllers.LoadRegisterUser,
+		AuthRequired: false,
+	},
 }

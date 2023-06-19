@@ -6,11 +6,10 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/diegoparra/pet-adocao-frontend/src/answers"
 	"github.com/diegoparra/pet-adocao-frontend/src/config"
 	"github.com/diegoparra/pet-adocao-frontend/src/cookies"
 	"github.com/diegoparra/pet-adocao-frontend/src/models"
-
-	"github.com/diegoparra/pet-adocao-frontend/src/answers"
 )
 
 // DoLogin use the email and password to authenticate a user into the app
@@ -21,7 +20,6 @@ func DoLogin(w http.ResponseWriter, r *http.Request) {
 		"email": r.FormValue("email"),
 		"senha": r.FormValue("senha"),
 	})
-
 	if err != nil {
 		answers.JSON(w, http.StatusBadRequest, answers.Err{Err: err.Error()})
 		return
@@ -48,9 +46,8 @@ func DoLogin(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if err = cookies.Save(w, dataAuthentication.ID, dataAuthentication.Token); err != nil {
+	if err = cookies.Save(w, dataAuthentication.ID, dataAuthentication.Token, dataAuthentication.Perfil); err != nil {
 		answers.JSON(w, http.StatusUnprocessableEntity, answers.Err{Err: err.Error()})
 		return
 	}
-
 }

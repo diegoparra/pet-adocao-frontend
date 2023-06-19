@@ -1,0 +1,104 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consolador Pets</title>
+  <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+    {{ template "menu-admin" }}
+    <div class="container-fluid">
+      <div class="row mt-4">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+          <h3>Editar Usuário</h3>
+          <fieldset>
+            <form id="editar-usuario" >
+              <div class="form-group">
+                <label for="id">ID</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="id"
+                  name="id"
+                  value="{{ .ID }}"
+                  readonly
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="nome">Nome</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nome"
+                  name="nome"
+                  required="required"
+                  placeholder="Insira o Nome do Usuário:"
+                  value="{{ .Nome }}"
+                />
+              </div>
+
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required="required"
+                  placeholder="Insira o Email do Usuário:"
+                  value="{{ .Email }}"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="perfil">Perfil</label>
+                <select
+                  class="form-control"
+                  id="perfil"
+                  name="perfil"
+                  required="required"
+                >
+                  <option selected>{{ .Perfil }}</option>
+                  {{- if (eq .Perfil "Administrador") }}
+                  <option>Voluntario</option>
+                  {{ else }}
+                  <option>Administrador</option>
+                  {{ end -}}
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="ativo">Ativo?</label>
+                <select
+                  class="form-control"
+                  id="ativo"
+                  name="ativo"
+                  required="required"
+                >
+                  <option selected>{{ .Ativo }}</option>
+                  {{- if (eq .Ativo "Sim") }}
+                  <option>Não</option>
+                  {{ else }}
+                  <option>Sim</option>
+                  {{ end -}}
+                </select>
+              </div>
+
+              <div>
+                <button class="btn btn-primary" type="submit">Atualizar Dados</button>
+              </div>
+            </form>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+
+  {{ template "footer" }}
+  {{ template "scripts" }}
+  <script src="/assets/js/users.js"></script>
+</body>

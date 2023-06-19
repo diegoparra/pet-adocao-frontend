@@ -55,12 +55,18 @@ p.card-text {
   background: rgba(39, 136, 245, 0.8);
 }
 
+.text-center {
+  text-align: center;
+  color: white;
+}
+
 .btn {
   display: flex;
   align-items: center;
   border: 5px solid;
   border-image-slice: 1;
-  background: var(--gradient) !important;
+  /* background: var(--gradient) !important; */
+  background: white;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   border-image-source: var(--gradient) !important;
@@ -78,120 +84,3 @@ p.card-text {
   text-decoration: underline;
 }
 
-/* old one HERE */
-
-/* h1 { */
-/*   font-size: 2.5rem; */
-/* } */
-/**/
-/* h5 { */
-/*   font-size: 1.25rem; */
-/* } */
-/**/
-/* h1, */
-/* h5 { */
-/*   line-height: 1.2; */
-/*   margin-bottom: 0.5rem; */
-/*   font-weight: 500; */
-/* } */
-/* /* ====================================== */ */
-/**/
-/* * { */
-/*   margin: 0; */
-/*   padding: 0; */
-/*   box-sizing: border-box; */
-/* } */
-/**/
-/* body { */
-/*   font-family: "Segoe UI"; */
-/*   color: #212529; */
-/*   height: 100vh; */
-/*   /* display: flex; */ */
-/*   /* flex-direction: column; */ */
-/*   align-items: stretch; */
-/**/
-/*   background: #dc7af0; /* #7aafde; */ */
-/*   background: linear-gradient(to right, #d0ece7, #edeed8); */
-/* } */
-/**/
-/* h1 { */
-/*   align-self: center; */
-/*   margin: 30px 0; */
-/*   font-family: "Lemonada", cursive; */
-/*   text-align: center; */
-/* } */
-/**/
-/* .pet-container { */
-/*   /* display: flex; */ */
-/*   /* flex-wrap: wrap; */ */
-/*   justify-content: center; */
-/**/
-/*   /*Both these lines are only useful for the loader*/ */
-/*   /* height: 100%; */ */
-/*   /* align-items: center; */ */
-/* } */
-/**/
-/* .pet-card { */
-/*   position: relative; */
-/*   z-index: -2; */
-/**/
-/*   height: 600px; */
-/*   width: 385px; */
-/**/
-/*   margin: 20px; */
-/**/
-/*   /* display: flex; */ */
-/*   /* flex-direction: column; */ */
-/*   /* justify-content: center; */ */
-/*   /* align-items: center; */ */
-/**/
-/*   box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5); */
-/*   border-radius: 20px; */
-/* } */
-/**/
-/* .pet-id { */
-/*   margin-top: 10px; */
-/*   border-radius: 20px; */
-/*   padding: 3px 10px; */
-/*   font-size: 1.1rem; */
-/*   background: rgba(0, 0, 0, 0.2); */
-/* } */
-/**/
-/* img { */
-/*   width: 70%; */
-/*   border-radius: 20px; */
-/* } */
-/**/
-/* .circle { */
-/*   padding: 65px; */
-/*   /* position: absolute; */ */
-/*   background: rgba(255, 255, 255, 0.5); */
-/*   border-radius: 50%; */
-/*   top: 6%; */
-/*   z-index: -1; */
-/* } */
-/**/
-/* .pet-name { */
-/*   margin-top: 10px; */
-/*   border-radius: 20px; */
-/*   padding: 3px 10px; */
-/*   font-size: 1.1rem; */
-/*   background: rgba(0, 0, 0, 0.2); */
-/*   font-weight: bold; */
-/* } */
-/**/
-/* .loader { */
-/*   border: 10px solid rgb(0, 0, 0, 0.4); */
-/*   border-radius: 50%; */
-/*   border-top: 10px solid transparent; */
-/*   height: 65px; */
-/*   width: 65px; */
-/**/
-/*   animation: spin 1.5s linear infinite; */
-/* } */
-/**/
-/* @keyframes spin { */
-/*   to { */
-/*     transform: rotate(360deg); */
-/*   } */
-/* } */

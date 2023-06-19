@@ -1,7 +1,6 @@
 {{ define "menu-admin" }}
-<nav
-  class="navbar navbar-expand-lg navbar-expand-sm navbar-expand-md navbar-dark bg-primary"
->
+<nav 
+  class="navbar navbar-expand-lg navbar-expand-sm navbar-expand-md navbar-light" style="background-color: #e3f2fd;">
   <a class="navbar-brand" href="/users/admin">Consolador Pets</a>
   <button
     class="navbar-toggler"
@@ -35,15 +34,44 @@
           Buscar Animal
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/users/admin">Todos os Pets</a>
           <a class="dropdown-item" href="/admin/gato">Gato</a>
           <a class="dropdown-item" href="/admin/cachorro">Cachorro</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/pet/cadastrar">Cadastrar Pet</a>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Gerenciar Pets
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/pet/cadastrar">Cadastrar Pet</a>
+          <a class="dropdown-item" href="/admin/adotados" >Ver Adotados</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/admin/adotados">Ver Adotados</a>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Gerenciar Usuarios
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/admin/cadastrar-usuario">Cadastrar Usuario</a>
+          <a class="dropdown-item" href="/admin/mostrar-usuarios" >Ver Usuarios</a>
+        </div>
       </li>
     </ul>
     <span class="navbar-text p-0">

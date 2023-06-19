@@ -1,4 +1,4 @@
-$('#formulario-cadastro').on('submit', criarUsuario);
+$('#novo-usuario').on('submit', criarUsuario);
 
 function criarUsuario(evento) {
     evento.preventDefault();
@@ -14,27 +14,13 @@ function criarUsuario(evento) {
         data: {
            nome: $('#nome').val(),
            email: $('#email').val(),
-           nick: $('#nick').val(),
            senha: $('#senha').val(),
-           nascimento: $('#nascimento').val(),
+           perfil: $('#perfil').val(),
         }
     }).done(function() {
-        Swal.fire("Sucesso!", "Usuário cadastrado com sucesso!", "success")
-            .then(function() {
-                $.ajax({
-                    url: "/login",
-                    method: "POST",
-                    data: {
-                        email: $('#email').val(),
-                        senha: $('#senha').val()
-                    }
-                }).done(function() {
-                    window.location = "/home";
-                }).fail(function() {
-                    Swal.fire("Ops...", "Erro ao autenticar o usuário!", "error");
-                })
-            })
+      Swal.fire("Sucesso!", "Usuário cadastrado com sucesso!", "success")
+      window.location = "/admin/cadastrar-usuario";
     }).fail(function() {
-        Swal.fire("Ops...", "Erro ao cadastrar o usuário!", "error");
+      Swal.fire("Ops...", "Erro ao cadastrar o usuário!", "error");
     });
 }

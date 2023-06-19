@@ -9,10 +9,10 @@ import (
 
 var routeUsers = []Route{
 	{
-		URI:          "/create-user",
+		URI:          "/admin/cadastrar-usuario",
 		Method:       http.MethodGet,
 		Func:         controllers.LoadRegisterUser,
-		AuthRequired: false,
+		AuthRequired: true,
 	},
 	{
 		URI:          "/users",
@@ -21,9 +21,9 @@ var routeUsers = []Route{
 		AuthRequired: false,
 	},
 	{
-		URI:          "/profile",
+		URI:          "/admin/mostrar-usuarios",
 		Method:       http.MethodGet,
-		Func:         controllers.LoadUserProfile,
+		Func:         controllers.LoadShowUsers,
 		AuthRequired: true,
 	},
 	{
@@ -39,13 +39,13 @@ var routeUsers = []Route{
 		AuthRequired: true,
 	},
 	{
-		URI:          "/edit-profile",
+		URI:          "/page/editar-usuario/{userID}",
 		Method:       http.MethodGet,
 		Func:         controllers.LoadUserEditProfile,
 		AuthRequired: true,
 	},
 	{
-		URI:          "/edit-profile",
+		URI:          "/editar-usuario/{userID}",
 		Method:       http.MethodPut,
 		Func:         controllers.EditUserProfile,
 		AuthRequired: true,

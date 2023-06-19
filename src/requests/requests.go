@@ -3,16 +3,22 @@ package requests
 import (
 	"io"
 	"net/http"
+
+	"github.com/diegoparra/pet-adocao-frontend/src/cookies"
 )
 
-func DoRequestWithAuth(r *http.Request, method, url string, data io.Reader) (*http.Response, error) {
+func DoRequestWithAuth(
+	r *http.Request,
+	method, url string,
+	data io.Reader,
+) (*http.Response, error) {
 	request, err := http.NewRequest(method, url, data)
 	if err != nil {
 		return nil, err
 	}
 
-	// cookie, _ := cookies.Read(r)
-	// request.Header.Add("Authorization", "Bearer "+cookie["token"])
+	cookie, _ := cookies.Read(r)
+	request.Header.Add("Authorization", "Bearer "+cookie["token"])
 
 	client := &http.Client{}
 	response, err := client.Do(request)

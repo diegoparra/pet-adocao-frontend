@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa do Consolador</title>
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    {{ template "menu-admin" }}
+    <h1>Usuarios Cadastrados</h1>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Perfil</th>
+            <th scope="col">Ativo</th>
+            <th scope="col">Editar</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range . }}
+          <tr>
+            <th scope="row">{{ .ID }}</th>
+            <td>{{ .Nome }}</td>
+            <td>{{ .Email }}</td>
+            <td>{{ .Perfil }}</td>
+            <td>{{ .Ativo }}</td>
+            <td>
+              <a href="/page/editar-usuario/{{ .ID }}"> Editar
+              <i class="fa-solid fa-user-pen" style="color: #2d6bd7;"></i>
+            </a>
+            </td>
+          </tr>
+          {{  end }}
+        </tbody>
+      </table>
+    </div>
+
+
+    {{ template "footer" }}
+    <!--  comment  -->
+    {{ template "scripts" }}
+
+  </body>
+</html>

@@ -1,5 +1,5 @@
 $('#atualizar-senha').on('submit', atualizarSenha);
-$('#editar-profile').on('submit', editProfile);
+$('#editar-usuario').on('submit', editProfile);
 $('#editar-foto').on('submit', editPhoto);
 
 
@@ -32,21 +32,18 @@ function editProfile(evento) {
   evento.preventDefault();
 
   $.ajax({
-    url: "/edit-profile",
+    url: "/editar-usuario/" + $("#id").val(),
     method: "PUT",
     data: {
       nome: $('#nome').val(),
       email: $('#email').val(),
-      nick: $('#nick').val(),
-      terapeuta: $('#show-terapeuta').val(),
-      facebook: $('#facebook').val(),
-      instagram: $('#instagram').val(),
-      telefone: $('#telefone').val(),
+      perfil: $('#perfil').val(),
+      ativo: $('#ativo').val(),
     }
   }).done(function() {
     Swal.fire("Sucesso!", "Usuário atualizado com sucesso!", "success")
       .then(function() {
-        window.location = "/profile";
+        window.location = "/admin/mostrar-usuarios";
       });
   }).fail(function() {
     Swal.fire("Ops...", "Erro ao atualizar o usuário!", "error");

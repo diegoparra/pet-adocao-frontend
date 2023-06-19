@@ -11,17 +11,13 @@ import (
 )
 
 type User struct {
-	ID        uint64    `json:"id"`
-	Name      string    `json:"nome"`
-	Email     string    `json:"email"`
-	Nick      string    `json:"nick"`
-	Birth     string    `json:"nascimento"`
-	Terapeuta string    `json:"terapeuta"`
-	Facebook  string    `json:"facebook"`
-	Instagram string    `json:"instagram"`
-	Telefone  string    `json:"telefone"`
-	File      string    `json:"file"`
-	CreatedAt time.Time `json:"criadoEm"`
+	ID       uint64    `json:"id,omitempty"`
+	Nome     string    `json:"nome,omitempty"`
+	Email    string    `json:"email,omitempty"`
+	Senha    string    `json:"senha,omitempty"`
+	Perfil   string    `json:"perfil,omitempty"`
+	Ativo    string    `json:"ativo,omitempty"`
+	CriadoEm time.Time `json:"criadoEm,omitempty"`
 }
 
 func SearchUserData(userID uint64, r *http.Request) (User, error) {

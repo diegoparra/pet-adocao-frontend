@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/diegoparra/pet-adocao-frontend/src/config"
-
 	"github.com/gorilla/securecookie"
+
+	"github.com/diegoparra/pet-adocao-frontend/src/config"
 )
 
 var s *securecookie.SecureCookie
@@ -17,11 +17,11 @@ func Config() {
 }
 
 // Save register auth information
-func Save(w http.ResponseWriter, ID, token string) error {
-
+func Save(w http.ResponseWriter, ID, token string, perfil string) error {
 	data := map[string]string{
-		"id":    ID,
-		"token": token,
+		"id":     ID,
+		"token":  token,
+		"perfil": perfil,
 	}
 
 	dataCoded, err := s.Encode("data", data)
