@@ -31,20 +31,21 @@
             <td>{{ .Perfil }}</td>
             <td>{{ .Ativo }}</td>
             <td>
-              <a href="/page/editar-usuario/{{ .ID }}"> Editar
-              <i class="fa-solid fa-user-pen" style="color: #2d6bd7;"></i>
-            </a>
+              {{- if (eq .Perfil "Administrador" ) }}
+              <a href="/page/editar-usuario/{{ .ID }}">
+                Editar
+                <i class="fa-solid fa-user-pen" style="color: #2d6bd7"></i>
+              </a>
+              {{ end -}}
             </td>
           </tr>
-          {{  end }}
+          {{ end }}
         </tbody>
       </table>
     </div>
 
-
     {{ template "footer" }}
     <!--  comment  -->
     {{ template "scripts" }}
-
   </body>
 </html>

@@ -10,6 +10,7 @@ function createPet(evento) {
   jform.append("especie", $("#especie").val());
   jform.append("genero", $("#genero").val());
   jform.append("porte", $("#porte").val());
+  jform.append("idade", $("#idade").val());
   jform.append("vacinado", $("#vacinado").val());
   jform.append("castrado", $("#castrado").val());
   jform.append("descricao", $("#descricao").val());
@@ -48,6 +49,7 @@ function editarPet(evento) {
       especie: $("#especie").val(),
       genero: $("#genero").val(),
       porte: $("#porte").val(),
+      idade: $("#idade").val(),
       vacinado: $("#vacinado").val(),
       castrado: $("#castrado").val(),
       descricao: $("#descricao").val(),

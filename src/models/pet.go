@@ -18,6 +18,7 @@ type Pet struct {
 	Descricao string    `json:"descricao,omitempty"`
 	Genero    string    `json:"genero,omitempty"`
 	Porte     string    `json:"porte,omitempty"`
+	Idade     string    `json:"idade,omitempty"`
 	Vacinado  string    `json:"vacinado,omitempty"`
 	Castrado  string    `json:"castrado,omitempty"`
 	Adotado   string    `json:"adotado,omitempty"`

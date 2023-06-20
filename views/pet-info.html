@@ -15,17 +15,18 @@
       <div class="row">
         <div class="col-sm-6 mx-auto">
           <div class="card">
-              <img
-                class="card-img-top img-fluid"
-                src="/{{ .Arquivo }}"
-                alt="Casa do Consolador Foto Animal"
-              />
+            <img
+              class="card-img-top img-fluid"
+              src="/{{ .Arquivo }}"
+              alt="Casa do Consolador Foto Animal"
+            />
             <div class="card-block">
               <h5 class="card-title text-center">{{ .Nome }}</h5>
               <p class="card-text text-center">Meu contato {{ .Telefone }}</p>
               <p class="card-text text-center">{{ .Descricao }}</p>
               <p class="card-text text-center">Sou {{ .Genero }}</p>
               <p class="card-text text-center">Meu Porte: {{ .Porte }}</p>
+              <p class="card-text text-center">Minha Idade: {{ .Idade }}</p>
               <p class="card-text text-center">{{ .Vacinado }} Vacinado</p>
               <p class="card-text text-center">{{ .Castrado }} Castrado</p>
               <p class="card-text text-center">Minha Especie: {{ .Especie }}</p>
@@ -39,6 +40,5 @@
     {{ template "footer" }}
     <!--  comment  -->
     {{ template "scripts" }}
-
   </body>
 </html>
