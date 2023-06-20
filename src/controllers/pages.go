@@ -39,7 +39,7 @@ func LoadRegisterUser(w http.ResponseWriter, r *http.Request) {
 	perfil := cookie["perfil"]
 
 	if perfil != "Administrador" {
-		answers.JSON(w, http.StatusForbidden, answers.Err{Err: "Nao Autorizado"})
+		// answers.JSON(w, http.StatusForbidden, answers.Err{Err: "Nao Autorizado"})
 		http.Redirect(w, r, "/admin/mostrar-usuarios", 302)
 		return
 	}
@@ -52,6 +52,14 @@ func LoadShowUsers(w http.ResponseWriter, r *http.Request) {
 
 	if cookie["token"] == "" {
 		http.Redirect(w, r, "/page/login", 302)
+		return
+	}
+
+	perfil := cookie["perfil"]
+
+	if perfil != "Administrador" {
+		// answers.JSON(w, http.StatusForbidden, answers.Err{Err: "Nao Autorizado"})
+		http.Redirect(w, r, "/users/admin", 302)
 		return
 	}
 
