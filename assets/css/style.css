@@ -60,7 +60,7 @@ p.card-text {
   color: white;
 }
 
-.btn {
+.btn-card {
   display: flex;
   align-items: center;
   border: 5px solid;
@@ -69,18 +69,19 @@ p.card-text {
   background: white;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
-  border-image-source: var(--gradient) !important;
+  /* border-image-source: var(--gradient) !important; */
   text-decoration: none;
   transition: all 0.4s ease;
+  padding: 8px;
 }
 
-.btn:hover,
-.btn:focus {
+.btn-card:hover,
+.btn-card:focus {
   background: var(--gradient) !important;
   -webkit-background-clip: none !important;
   -webkit-text-fill-color: #fff !important;
   border: 5px solid #fff !important;
   box-shadow: #222 1px 0 10px;
-  text-decoration: underline;
+  text-decoration: none;
 }
 

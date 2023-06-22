@@ -4,6 +4,8 @@ import (
 	"log"
 	"os"
 	"strconv"
+
+	"github.com/joho/godotenv"
 )
 
 var (
@@ -21,9 +23,9 @@ var (
 func Load() {
 	var err error
 
-	// if err = godotenv.Load(); err != nil {
-	// 	log.Fatal(err)
-	// }
+	if err = godotenv.Load(); err != nil {
+		log.Fatal(err)
+	}
 
 	Port, err = strconv.Atoi(os.Getenv("APP_PORT"))
 	if err != nil {

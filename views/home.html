@@ -29,7 +29,7 @@
               <p class="card-text text-center">Eu sou {{ .Genero }}</p>
               <p class="card-text text-center">Estou em Santo Andre</p>
               <a href="/pet/details/{{ .ID }}">
-                <button type="button" class="btn btn-primary mx-auto">
+                <button type="button" class="btn-card btn-primary mx-auto" style="text-decoration: none">
                   Clique aqui e saiba mais  
                 </button>
               </a>
@@ -41,9 +41,9 @@
     </div>
 
     {{ template "footer" }}
-    <footer class="text-muted mt-4">
+    <footer class="text-muted mt-4 text-dark">
       <div class="container mt-1 mb-4">
-        <a href="/page/login">
+        <a href="/page/login" class="text-decoration-none text-dark">
           Login
         </a>
       </div>
