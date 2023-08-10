@@ -12,7 +12,7 @@ function doLogin(evento) {
     },
   })
     .done(function () {
-      window.location = "/users/admin";
+      window.location = "/home/admin";
     })
     .fail(function () {
       Swal.fire("Ops...", "Usuário ou senha incorretos!", "error");

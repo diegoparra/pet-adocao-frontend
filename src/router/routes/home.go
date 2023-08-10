@@ -20,19 +20,19 @@ var routeHome = []Route{
 		AuthRequired: false,
 	},
 	{
-		URI:          "/users/admin",
+		URI:          "/home/admin",
 		Method:       http.MethodGet,
 		Func:         controllers.LoadHomeAdmin,
 		AuthRequired: true,
 	},
 	{
-		URI:          "/admin/{especie}",
+		URI:          "/home/admin/{especie}",
 		Method:       http.MethodGet,
 		Func:         controllers.LoadHomeEspecieAdmin,
 		AuthRequired: true,
 	},
 	{
-		URI:          "/admin/adotados",
+		URI:          "/home/admin/adotados",
 		Method:       http.MethodGet,
 		Func:         controllers.LoadHomeAdotadosAdmin,
 		AuthRequired: true,

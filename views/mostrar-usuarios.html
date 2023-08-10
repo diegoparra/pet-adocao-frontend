@@ -31,12 +31,10 @@
             <td>{{ .Perfil }}</td>
             <td>{{ .Ativo }}</td>
             <td>
-              {{- if (eq .Perfil "Administrador" ) }}
               <a href="/page/editar-usuario/{{ .ID }}">
                 Editar
                 <i class="fa-solid fa-user-pen" style="color: #2d6bd7"></i>
               </a>
-              {{ end -}}
             </td>
           </tr>
           {{ end }}

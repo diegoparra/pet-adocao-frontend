@@ -1,40 +1,40 @@
 {{ define "menu-admin" }}
 <nav
-  class="navbar navbar-expand-lg navbar-expand-sm navbar-expand-md navbar-light"
-  style="background-color: #e3f2fd"
->
-  <a class="navbar-brand" href="/users/admin">
-    <img
-      class="img-fluid"
-      src="/assets/img/cropped-Casa-logo.png"
-      alt="Logo Casa do Consolador"
-      style="height: 77px"
-  /></a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbar-principal"
-    aria-controls="navbar-principal"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbar-principal">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="/users/admin"
-          >Página Principal <span class="sr-only">(current)</span></a
+    class="navbar navbar-expand-lg navbar-expand-sm navbar-expand-md navbar-light"
+    style="background-color: #e3f2fd"
+    >
+    <a class="navbar-brand" href="/users/admin">
+      <img
+          class="img-fluid"
+          src="/assets/img/cropped-Casa-logo.png"
+          alt="Logo Casa do Consolador"
+          style="height: 77px"
+          /></a>
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar-principal"
+        aria-controls="navbar-principal"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
         >
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-principal">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home/admin"
+                              >Página Principal <span class="sr-only">(current)</span></a
+                            >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
@@ -42,9 +42,9 @@
           Buscar Animal
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/users/admin">Todos os Pets</a>
-          <a class="dropdown-item" href="/admin/gato">Gato</a>
-          <a class="dropdown-item" href="/admin/cachorro">Cachorro</a>
+          <a class="dropdown-item" href="/home/admin">Todos os Pets</a>
+          <a class="dropdown-item" href="/home/admin/gato">Gato</a>
+          <a class="dropdown-item" href="/home/admin/cachorro">Cachorro</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -61,7 +61,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/pet/cadastrar">Cadastrar Pet</a>
-          <a class="dropdown-item" href="/admin/adotados">Ver Adotados</a>
+          <a class="dropdown-item" href="/home/admin/adotados">Ver Adotados</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -85,13 +85,31 @@
           >
         </div>
       </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Gerenciar Perfil
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#"
+            >Ver Perfil</a
+          >
+          <a class="dropdown-item" href="#"
+            >Trocar Senha</a
+          >
+          <a class="dropdown-item" href="/users/sair"
+            >Sair</a
+          >
+        </div>
+      </li>
     </ul>
-    <span class="navbar-text p-0">
-      <a href="/users/sair">
-        Sair
-        <i class="fas fa-power-off"></i>
-      </a>
-    </span>
   </div>
 </nav>
 {{ end }}
